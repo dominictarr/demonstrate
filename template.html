@@ -1,0 +1,99 @@
+<!doctype html>
+<head>
+  <style>
+    body {
+      font-family: sans-serif;
+      color: #333333;
+    }
+
+    .demo, .noedit {
+      font-family: monospace;
+      font-size  : 14px;
+      padding    : 2px;
+      margin     : 0px;
+      border: 1px solid #ccc;
+      display    : inline-block;
+      border-radius: 3px;
+    }
+
+    .demoInput {
+      background-color: rgb(255, 255, 244);
+    }
+    .demoOutput {
+      background-color: rgb(172, 243, 172);
+    }
+    .demoError {
+      background-color: rgb(248, 151, 151);
+    }
+    .demoNull {
+      background-color: rgb(224, 203, 149);
+    }
+    .demoIO, .noedit {
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      display: inline-block;
+      padding: 5px;
+      background-color: #f8f8f8;
+    }
+    .noedit {
+      display: block;
+    }
+
+    .markdown {
+      display: inline-block;
+      background: #fff;
+      border-radius: 3px;
+      padding: 3px;
+      font-size: 14px;
+      line-height: 1.6;
+      font: 13px Helvetica, arial, freesans, clean, sans-serif;
+      border: 1px solid #CACACA;
+      margin: 0px auto auto;
+      padding: 0px 30px 0px 30px;
+      text-align: left;
+    }
+
+    .markdown p {
+      max-width: 600px;
+    }
+
+    #centerer {
+      text-align: center;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    .markdown>h2, .markdown>h3,
+    .markdown>h4, .markdown>h5, .markdown>h6 {
+      border-bottom: 1px solid #ccc;
+    }
+
+    .container {
+      padding: 3px;
+      background: #EEE;
+      border-radius: 3px;
+      margin: 0px;
+      display: inline-block;
+      margin-bottom: 200px;
+    }
+
+    #footer {
+      font-size: 10px;
+      text-align: center;
+    }
+
+  </style>
+  <script>{{{BUNDLE}}}</script>
+</head>
+<body>
+  <div id=centerer>
+    <div class=container><div class=markdown>
+      {{{MARKDOWN}}}
+    </div></div>
+  </div>
+<div id=footer>
+created with <a href=https://github.com/dominictarr/demonstrate>demonstrate</a>
+</div>
+  <script>{{{SCRIPT}}}</script>
+</body>
+</html>

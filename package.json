@@ -1,0 +1,17 @@
+{
+  "name": "demonstrate",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dominictarr/demonstrate",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dominictarr/demonstrate.git"
+  },
+  "dependencies": {
+    "hyperscript": "~1.0.0",
+    "observable": "~1.0.0"
+  },
+  "devDependencies": {},
+  "bin": "./index.js",
+  "author": "Dominic Tarr <dominic.tarr@gmail.com> (http://dominictarr.com)",
+  "license": "MIT"
+}
