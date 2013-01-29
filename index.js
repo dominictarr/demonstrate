@@ -26,7 +26,7 @@ var markdown = marked.parser(lexed)
 //create a copy the template there... & insert markdown
 
 //generate bundle
-exec('browserify ./tmp.js --exports require',
+exec('browserify ./tmp.js --exports require --debug',
   {maxBuffer: 1024*1024},
   function (err, bundle) {
     if(err) throw err
