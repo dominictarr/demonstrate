@@ -9,7 +9,8 @@
   "dependencies": {
     "hyperscript": "~1.0.0",
     "observable": "~1.0.0",
-    "marked": "~0.2.8"
+    "marked": "~0.2.8",
+    "browserify": "~1.18.0"
   },
   "devDependencies": {},
   "bin": "./index.js",
