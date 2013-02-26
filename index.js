@@ -1,7 +1,8 @@
 #! /usr/bin/env node
 
 var marked = require('marked')
-var join   = require('path').join
+var path = require('path')
+var join = path.join
 
 var r = Math.random() 
 //step 1, parse the js out of a markdown file...
@@ -24,9 +25,11 @@ var markdown = marked.parser(lexed)
 //try { fs.mkdir('static') } catch (_) {}
 
 //create a copy the template there... & insert markdown
+var bfy = path.join(path.dirname(
+  require.resolve('browserify')), 'bin', 'cmd.js')
 
 //generate bundle
-exec('browserify ./tmp.js --exports require --debug',
+exec(bfy+' ./tmp.js --exports require --debug',
   {maxBuffer: 1024*1024},
   function (err, bundle) {
     if(err) throw err
@@ -37,6 +40,7 @@ exec('browserify ./tmp.js --exports require --debug',
             fs.readFileSync(join(__dirname, 'demo.js'), 'utf-8'))
         .replace('{{{BUNDLE}}}', bundle)
     )
+    fs.unlinkSync('./tmp.js')
   })
 
 /*

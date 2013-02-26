@@ -20,7 +20,7 @@ a.filter(function (e) {
             if(r == null)
               return h('pre.demo.demoNull', r === null ? 'null' : 'undefined')
 
-            return h('pre.demo.demoOutput', r)
+            return h('pre.demo.demoOutput', JSON.stringify(r, false, 2))
           } 
           catch (err) { return h('pre.demo.demoError', err.toString()) }
         })
