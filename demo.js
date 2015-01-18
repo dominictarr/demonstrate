@@ -253,8 +253,8 @@ a.filter(function (e) {
   var demo = 
     h('div.demoIO', 
       textarea = h('textarea.demo.demoInput', 
-        {cols: 80, rows: e.innerText.split('\n').length + 1}, 
-        e.innerText),
+        {cols: 80, rows: e.textContent.split('\n').length + 1}, 
+        e.textContent),
       h('div', o.transform(o.input(textarea), function (code) {
           try         { 
             var r = eval(code) 
